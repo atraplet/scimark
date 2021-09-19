@@ -1,6 +1,6 @@
 package jnt.scimark2;
 
-public class kernel
+public class Kernel
 {
 	// each measurement returns approx Mflops
 

@@ -1,7 +1,5 @@
 package jnt.scimark2;
 
-import java.util.Properties;
-
 /**
 	SciMark2: A Java numerical benchmark measuring performance
 	of computational kernels for FFTs, Monte Carlo simulation,
@@ -12,7 +10,7 @@ import java.util.Properties;
 */
 
 
-public class commandline
+public class CommandLine
 {
 
   /* Benchmark 5 kernels with individual Mflops.
@@ -67,12 +65,12 @@ public class commandline
 		double res[] = new double[6];
 		Random R = new Random(Constants.RANDOM_SEED);
 
-		res[1] = kernel.measureFFT( FFT_size, min_time, R);
-		res[2] = kernel.measureSOR( SOR_size, min_time, R);
-		res[3] = kernel.measureMonteCarlo(min_time, R);
-		res[4] = kernel.measureSparseMatmult( Sparse_size_M, 
+		res[1] = Kernel.measureFFT( FFT_size, min_time, R);
+		res[2] = Kernel.measureSOR( SOR_size, min_time, R);
+		res[3] = Kernel.measureMonteCarlo(min_time, R);
+		res[4] = Kernel.measureSparseMatmult( Sparse_size_M,
 					Sparse_size_nz, min_time, R);
-		res[5] = kernel.measureLU( LU_size, min_time, R);
+		res[5] = Kernel.measureLU( LU_size, min_time, R);
 
 
 		res[0] = (res[1] + res[2] + res[3] + res[4] + res[5]) / 5;
