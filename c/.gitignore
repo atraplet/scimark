@@ -125,3 +125,4 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+/scimark4
