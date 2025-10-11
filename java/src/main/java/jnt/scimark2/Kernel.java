@@ -61,7 +61,7 @@ public class Kernel
 	{
 		Stopwatch Q = new Stopwatch();
 
-		int cycles=1;
+		long cycles=1;
 		while(true)
 		{
 			Q.start();
