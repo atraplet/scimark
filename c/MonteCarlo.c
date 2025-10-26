@@ -32,7 +32,7 @@
 static const int SEED = 113;
 
 
-    double MonteCarlo_num_flops(int Num_samples)
+    double MonteCarlo_num_flops(unsigned long Num_samples)
     {
         /* 3 flops in x^2+y^2 and 1 flop in random routine */
 
@@ -42,15 +42,15 @@ static const int SEED = 113;
 
     
 
-    double MonteCarlo_integrate(int Num_samples)
+    double MonteCarlo_integrate(unsigned long Num_samples)
     {
 
 
         Random R = new_Random_seed(SEED);
 
 
-        int under_curve = 0;
-        int count;
+        unsigned long under_curve = 0;
+        unsigned long count;
 
         for (count=0; count<Num_samples; count++)
         {

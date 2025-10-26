@@ -105,7 +105,7 @@
         double sum = 0.0;
         Stopwatch Q = new_Stopwatch();
 
-        int cycles=1;
+        unsigned long cycles=1;
         while(1)
         {
             Stopwatch_start(Q);
